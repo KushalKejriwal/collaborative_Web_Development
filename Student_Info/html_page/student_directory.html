@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+        html,body{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .box {
+            padding: 20px;
+            border: 2px solid rgb(40, 70, 140);
+            height: 40vh;
+            width: 40vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 3px 9px rgb(40, 70, 140);
+        }
+
+        .fields {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 3vh;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .fields label {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-bottom: 10px;
+            color: rgb(40, 70, 140);
+        }
+
+        .fields input {
+            height: 5vh;
+            width: 20vw;
+            border-radius: 10px;
+            border-color: rgb(40, 70, 140);
+            box-shadow: 0px 3px 9px rgb(40, 70, 140);
+        }
+
+        .btn {
+            display: flex;
+            justify-content: space-between;
+            width: 25vw;
+        }
+
+        .btn button {
+            height: 6vh;
+            width: 10vw;
+            border-radius: 2vw;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: large;
+            font-weight: 700;
+        } 
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="student_fetch.php" class="roll_form" method="POST">
+            <div class="fields">
+                <label for="roll">Roll No</label>
+                <input type="text" id="roll" name="roll" required>
+            </div>
+            <div class="btn">
+                <button type="submit" class="submit">SUBMIT</button>
+                <button type="button" class="cancel" onclick="window.location.href='admin_page.php';">CANCEL</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
